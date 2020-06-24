@@ -2,11 +2,15 @@ radio.onReceivedNumber(function (receivedNumber) {
     basic.clearScreen()
     basic.pause(1000)
     if (true) {
-        basic.showIcon(IconNames.Triangle)
+    	
     } else if (receivedNumber == 0 && (receivedNumber == 1 || receivedNumber == 1 && (receivedNumber == 2 || receivedNumber == 2 && receivedNumber == 0))) {
         basic.showIcon(IconNames.No)
     } else if (receivedNumber == 0 && receivedNumber == 2 || receivedNumber == 1 && (receivedNumber == 0 || receivedNumber == 2 && receivedNumber == 1)) {
         basic.showIcon(IconNames.SmallHeart)
+    } else if (receivedNumber == 0 && (receivedNumber == 0 || receivedNumber == 1 && (receivedNumber == 1 || receivedNumber == 2 && receivedNumber == 2))) {
+        basic.showIcon(IconNames.Triangle)
+    } else {
+    	
     }
 })
 input.onButtonPressed(Button.A, function () {
